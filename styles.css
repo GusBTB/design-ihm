@@ -1,0 +1,295 @@
+:root {
+    --primary: #014d54;
+    --secondary: #000;
+    --link-color: white;
+    /* Cor dos links */
+    --underline-color: white;
+}
+
+body {
+    max-width: 100dvw;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: "Inter";
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 25px;
+}
+
+header {
+    background-color: var(--primary);
+    padding: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--primary);
+    padding: 0px 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    font-size: 19px;
+}
+
+.menu a {
+    position: relative;
+    /* Necessário para o pseudo-elemento */
+    display: inline-block;
+    /* Necessário para o pseudo-elemento */
+    padding: 5px 0;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--underline-color);
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.header_container {
+    box-sizing: border-box;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+.logos_div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer_text {
+    color: white;
+    text-align: right;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    a {
+        color: white;
+    }
+}
+
+
+
+.logo {
+    width: 200px;
+    /* height: 150px; */
+    overflow: hidden;
+}
+
+.logo_fipp {
+    width: 100px;
+    object-fit: contain;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+    margin: -30px 0px;
+}
+
+footer .logo {
+    width: 100px;
+    /* height: 150px; */
+    overflow: hidden;
+}
+
+footer .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 0px 0px;
+}
+
+.main {
+    padding: 20px 50px;
+}
+
+.content {
+    max-width: 1200px;
+
+}
+
+.blog_header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.members_div {
+    display: flex;
+    gap: 15px;
+}
+
+.one_member {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.members_foto {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.main_image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.normal_section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.linguagens_comando {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image_50 {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.gui {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.img_text {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+
+    img {
+        max-height: 300px;
+        object-fit: contain;
+    }
+}
+
+.inerfaces_container {
+    margin: 0 auto;
+}
+
+.imagem-esquerda {
+    float: left;
+    width: 50%;
+    margin: 0 10px 10px 0;
+    border-radius: 10px;
+}
+
+.imagem-direita {
+    float: right;
+    width: 50%;
+    margin: 0 0 10px 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .imagem-direita {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .footer_container {
+        flex-direction: column;
+    }
+
+    .footer_text {
+        text-align: left;
+    }
+
+    .imagem-esquerda {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+    }
+}
+
+@media (max-width: 560px) {
+    .main {
+        padding: 15px 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .img_text {
+        flex-direction: column;
+    }
+
+    .image_50 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 470px) {
+    .menu {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    header {
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
